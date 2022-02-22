@@ -9,6 +9,7 @@ window.addEventListener("load", function () {
   btnOpen.addEventListener("click", function () {
     const inpFile = document.createElement("input");
     inpFile.type = "file";
+    inpFile.style.display = "none";
     inpFile.addEventListener("input", function () {
       const script = document.createElement("script");
       script.src = URL.createObjectURL(inpFile.files[0]);
