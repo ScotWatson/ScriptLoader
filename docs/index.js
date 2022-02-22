@@ -5,7 +5,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 window.addEventListener("load", function () {
   const btnOpen = document.createElement("button");
-  btnOpen.innerHTML = "Open File";
+  btnOpen.innerHTML = "Open Script";
   btnOpen.addEventListener("click", function () {
     const inpFile = document.createElement("input");
     inpFile.type = "file";
@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
       const script = document.createElement("script");
       script.src = URL.createObjectURL(inpFile.files[0]);
       inpFile.remove();
+      btnOpen.remove();
       document.body.appendChild(script);
     });
     document.body.appendChild(inpFile);
