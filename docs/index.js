@@ -17,3 +17,4 @@ btnOpen.addEventListener("click", function () {
   document.body.appendChild(inpFile);
   inpFile.click();
 });
+document.body.appendChild(btnOpen);
